@@ -1,10 +1,10 @@
 Package: PKPDUsefulfunctions
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Useful PKPD Functions
 Version: 0.1
 Date: 2018-02-01
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Luke Fostvedt
+Maintainer: Luke Fostvedt <lukefostvedt@gmail.com>
+Description: Compilation of many useful PKPD modeling and Reporting functions
+License: GNU public license (absolutely NO warranty)
 LazyData: TRUE
