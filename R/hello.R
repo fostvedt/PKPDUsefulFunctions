@@ -11,17 +11,23 @@
 # useful PKPD summary stats
 
 gm_mean = function(x, na.rm=TRUE){
+  if(sum(x<=0,na.rm=T)>0) cat("Some values were negative and/or 0 and were removed\n")
+  if(sum(is.na(x))>0) cat("There were ",sum(is.na(x)),"NA values removed\n")
   mean_gm = mean(log(x[x > 0]), na.rm=T)
   exp(mean_gm)
 }
 
 geo_sd <- function(x,na.rm=TRUE) {
-sdlog <- sd(log(x[x > 0]), na.rm = T)
-exp(sdlog)
+  if(sum(x<=0,na.rm=T)>0) cat("Some values were negative and/or 0 and were removed\n")
+  if(sum(is.na(x))>0) cat("There were ",sum(is.na(x)),"NA values removed\n")
+  sdlog <- sd(log(x[x > 0]), na.rm = T)
+  exp(sdlog)
 }
 
 geo_cv<-function(x, na.rm = TRUE){
-  sqrt(exp(log(geosd)^2)-1)
+  if(sum(x<=0,na.rm=T)>0) cat("Some values were negative and/or 0 and were removed\n")
+  if(sum(is.na(x))>0) cat("There were ",sum(is.na(x)),"NA values removed\n")
+  sqrt(exp(log(geosd(x))^2)-1)
 }
 
 
